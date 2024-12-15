@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1732281152111-ab0ff0f9662f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDl8fHxlbnwwfHx8fHw%3D");
+  background-size: cover; 
+  background-position: center; 
+}
+
+.log-in-box {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  background-color: rgb(253, 252, 252);
+  width: 100%; 
+  max-width: 540px;
+  padding: 20px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center; 
+  font-size: 24px; 
+  margin-bottom: 20px;
+  color: #333; 
+  font-weight: bold; 
+}
+.input-box, .password-box {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 300px;
+}
+.input-box input, .password-box input {
+  width: 100%;
+  padding: 10px 40px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.input-box input:focus, .password-box input:focus {
+  border-color: #007BFF;
+}
+
+.input-box label, .password-box label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label,
+.password-box input:focus ~ label,
+.password-box input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: #007BFF;
+}
+
+.input-box .icon, .password-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide icons when typing */
+/* .input-box input:not(:placeholder-shown) ~ .icon,
+.password-box input:not(:placeholder-shown) ~ .icon {
+  opacity: 0;
+  pointer-events: none;
+} */
+.input-box input:focus::placeholder,
+.password-box input:focus::placeholder {
+  color: transparent;
+}
+
+form {
+  background: #fff;
+ padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #555;
+}
+.remember-forgot input[type="checkbox"] {
+  margin-top: 20px;
+  accent-color: #007BFF; 
+}
+.remember-forgot a {
+  text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+.remember-forgot a:hover {
+  color: #0056b3;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.register-link {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.register-link a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.register-link a:hover {
+  color: #0056b3;
+}
